@@ -1,5 +1,7 @@
 # phaser-getting-started
 
+[![Build Status](https://travis-ci.org/iagodahlem/starts-and-bombs.svg?branch=master)](https://travis-ci.org/iagodahlem/starts-and-bombs)
+
 Simple arcade game build up with Phaser 3. Based on [Phaser official tutorial](https://phaser.io/tutorials/making-your-first-phaser-3-game).
 
 ## Install
