@@ -4,6 +4,7 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^4.5.1",
     "phaser": "3.9.0"
   },
   "devDependencies": {
