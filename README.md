@@ -1,4 +1,4 @@
-# phaser-getting-started
+# [stars-and-bombs](https://iagodahlem.com/stars-and-bombs/)
 
 [![Build Status](https://travis-ci.org/iagodahlem/starts-and-bombs.svg?branch=master)](https://travis-ci.org/iagodahlem/starts-and-bombs)
 
