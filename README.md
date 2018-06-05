@@ -1,18 +1,28 @@
 # phaser-getting-started
 
-> TODO: Write a project description
-
-## Requirements
-
-> TODO: Describe the requirements
+Simple arcade game build up with Phaser 3. Based on [Phaser official tutorial](https://phaser.io/tutorials/making-your-first-phaser-3-game).
 
 ## Install
 
-> TODO: Describe the installation process
+To install dependencies you will need yarn, so go get it if you don't have it yet.
 
-## Usage
+```sh
+yarn
+```
 
-> TODO: Write usage instructions
+## Running
+
+To start the development server.
+
+```sh
+yarn start
+```
+
+To build for production.
+
+```sh
+yarn build
+```
 
 ## Contributing
 
