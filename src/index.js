@@ -26,6 +26,9 @@ let player
 let cursors
 let stars
 
+let score = 0
+let scoreText
+
 function preload() {
   this.load.image('sky', 'src/assets/sky.png')
   this.load.image('ground', 'src/assets/platform.png')
@@ -57,6 +60,8 @@ function create() {
   stars.children.iterate((child) => {
     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8))
   })
+
+  scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '18px', fill: '#000' })
 
   this.physics.add.collider(player, platforms)
   this.physics.add.collider(stars, platforms)
@@ -102,4 +107,7 @@ function update() {
 
 function collectStar(player, star) {
   star.disableBody(true, true)
+
+  score += 10
+  scoreText.setText('Score: ' + score)
 }
