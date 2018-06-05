@@ -26,12 +26,21 @@ module.exports = {
           ExtractCssPlugin.loader,
           'css-loader'
         ],
-      }
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
+      favicon: './public/favicon.ico',
     }),
     new ExtractCssPlugin({
       filename: '[name].css',
