@@ -23,6 +23,7 @@ const game = new Phaser.Game(config)
 
 let platforms
 let player
+let cursors
 
 function preload() {
   this.load.image('sky', 'src/assets/sky.png')
@@ -42,8 +43,10 @@ function create() {
   platforms.create(750, 220, 'ground')
 
   player = this.physics.add.sprite(100, 450, 'dude')
-  player.setBounce(0.2)
+  player.setBounce(0.1)
   player.setCollideWorldBounds(true)
+
+  cursors = this.input.keyboard.createCursorKeys()
 
   this.physics.add.collider(player, platforms)
 
@@ -56,7 +59,7 @@ function create() {
 
   this.anims.create({
     key: 'turn',
-    frames: [ { key: 'dude', frame: 4 } ],
+    frames: [{ key: 'dude', frame: 4 }],
     frameRate: 20
   })
 
@@ -69,5 +72,18 @@ function create() {
 }
 
 function update() {
+  if (cursors.left.isDown) {
+    player.setVelocityX(-160)
+    player.anims.play('left', true)
+  } else if (cursors.right.isDown) {
+    player.setVelocityX(160)
+    player.anims.play('right', true)
+  } else {
+    player.setVelocityX(0)
+    player.anims.play('turn')
+  }
 
+  if (cursors.up.isDown && player.body.touching.down) {
+    player.setVelocityY(-330)
+  }
 }
