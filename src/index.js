@@ -19,7 +19,7 @@ const config = {
   },
 }
 
-const game = new Phaser.Game(config)
+new Phaser.Game(config)
 
 let platforms
 let player
@@ -137,7 +137,7 @@ function collectStar(player, star) {
   }
 }
 
-function hitBomb(player, bomb) {
+function hitBomb(player) {
   this.physics.pause()
 
   player.setTint(0xff0000)
